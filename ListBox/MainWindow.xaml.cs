@@ -54,19 +54,27 @@ namespace ListBox
 
         private void _1stcolores_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            tb1colores_editar.Text =
-                Colores[_1stcolores.SelectedIndex].Nombre;
-            tb2colores_editar.Text =
-               Colores[_1stcolores.SelectedIndex].Hexadecimal;
-            tb3colores_editar.Text =
-               Colores[_1stcolores.SelectedIndex].RGB;
+            if (_1stcolores.SelectedIndex != -1)
+            {
+                tb1colores_editar.Text =
+                    Colores[_1stcolores.SelectedIndex].Nombre;
+                tb2colores_editar.Text =
+                   Colores[_1stcolores.SelectedIndex].Hexadecimal;
+                tb3colores_editar.Text =
+                   Colores[_1stcolores.SelectedIndex].RGB;
+            }
         }
 
         private void Editarbtn_Click(object sender, RoutedEventArgs e)
         {
             if (_1stcolores.SelectedIndex != -1);
             {
-
+                Colores[_1stcolores.SelectedIndex].Nombre =
+                    tb1colores.Text;
+                Colores[_1stcolores.SelectedIndex].Hexadecimal =
+                    tb2colores.Text;
+                Colores[_1stcolores.SelectedIndex].RGB =
+                    tb3colores.Text;
             }
         }
     }
