@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox x:Name="_1stcolores" HorizontalAlignment="Left" Height="360" VerticalAlignment="Top" Width="167" Margin="10,24,0,0">
+        <ListBox x:Name="_1stcolores" HorizontalAlignment="Left" Height="360" VerticalAlignment="Top" Width="167" Margin="10,24,0,0" SelectionChanged="_1stcolores_SelectionChanged">
 
         </ListBox>
         <Button Content="Nuevo Color" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="417,43,0,0" Click="Button_Click"/>
@@ -17,6 +17,14 @@
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Hexadecimal" VerticalAlignment="Top" Margin="236,84,0,0"/>
         <TextBox x:Name="tb3colores" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="236,164,0,0"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="RGB" VerticalAlignment="Top" Margin="236,143,0,0"/>
+        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="205,364,0,0"/>
+        <Button x:Name="Editarbtn" Content="Editar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="651,232,0,0" Click="Editarbtn_Click" />
+        <TextBox x:Name="tb1colores_editar" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="470,232,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Nombre" VerticalAlignment="Top" Margin="470,211,0,0"/>
+        <TextBox x:Name="tb2colores_editar" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="470,294,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Hexadecimal" VerticalAlignment="Top" Margin="470,273,0,0"/>
+        <TextBox x:Name="tb3colores_editar" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="470,353,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="RGB" VerticalAlignment="Top" Margin="470,332,0,0"/>
 
     </Grid>
 </Window>
