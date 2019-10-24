@@ -21,24 +21,26 @@ namespace ListBox
     /// </summary>
     public partial class MainWindow : Window
     {
-        ObservableCollection<string> Colores = new ObservableCollection<string>();
+        ObservableCollection<Color> Colores = new ObservableCollection<Color>();
+
         public MainWindow()
         {
            
             InitializeComponent();
 
-            Colores.Add("rojo");
-            Colores.Add("naranja");
-            Colores.Add("amarillo");
-            Colores.Add("verde");
-
+            Colores.Add(new Color("rojo", "#FF000", "(255,0,0)"));
+            Colores.Add(new Color("verde", "#00FF0", "(0,0,255)"));  
+            Colores.Add(new Color("azul", "#000000ff", "(0,0,255)"));
             _1stcolores.ItemsSource = Colores;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Colores.Add(tb1colores.Text);
-            tb1colores.Text = "";
+
+            Colores.Add(new Color(tb1colores.Text, tb2colores.Text, tb3colores.Text));
+            tb1colores.Clear();
+            tb2colores.Clear();
+            tb3colores.Clear();
 
         }
     }
