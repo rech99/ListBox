@@ -76,6 +76,7 @@ namespace ListBox
                 Colores[_1stcolores.SelectedIndex].RGB =
                     tb3colores.Text;
             }
+            _1stcolores.Items.Refresh();
         }
     }
 }
